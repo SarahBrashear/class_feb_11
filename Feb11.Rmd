@@ -7,4 +7,23 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
+
+library(tidyverse)
+library(readxl)
 ```
+
+```{r}
+x <- read_excel("raw_data/class_enrollment_summary_by_term_2-11-2021.xlsx", 
+                skip = 2,
+                col_names = TRUE) 
+
+```
+
+
+```{r}
+x %>%
+  drop_na()
+
+
+```
+
